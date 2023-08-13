@@ -27,7 +27,9 @@ def printUserInfo(user, roles, no_roles = False) :
     
     user = obj['user']
     uname = user['username']
-    dname = user['display_name']
+    dname = ''
+    if 'display_name' in user: 
+    	dname = user['display_name']
     myroles = ''
 
     myroles = obj['roles']
