@@ -43,8 +43,12 @@ def printUserInfo(user, roles, no_roles = False) :
 #print(r.raise_for_status())
 for obj in r.json():
     printUserInfo(obj, roles)
-    
 
+print()
+print() 
+print('Users with no roles: ')
+for obj in r.json():
+    printUserInfo(obj, roles, no_roles = True)
 
 
 
